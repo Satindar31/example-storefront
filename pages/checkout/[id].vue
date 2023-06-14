@@ -12,7 +12,12 @@ const { data } = await useFetch('/api/checkout/' + id, {
         id: id
     }
 })
-// console.log(data.value.data)
+
+const url = data.value.replace('"', '').replace('"', '')
+
+await navigateTo(url, {
+  external: true
+})
 </script>
 
 <style scoped></style>
