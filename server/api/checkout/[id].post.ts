@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
   try {
     // Generates a link for checkout
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card', 'cashapp', 'customer_balance', 'paypal'],
+      payment_method_types: ['card'],
       mode: 'payment',
       success_url: `${process.env.URL}/success`,
       cancel_url: `${process.env.URL}/cancel`,
