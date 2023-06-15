@@ -7,15 +7,20 @@ const products = new Map([
 
 
 export default defineEventHandler(async (event) => {
-  console.log(useRuntimeConfig().stripeSecret)
+  // Basicaly gets the stripe secret(specified from the .env in nuxt.config.ts)
+  // console.log(useRuntimeConfig().stripeSecret)
+  
+  // Reads the request body for product id
   const body = await readBody(event)
 
+  // Gets the product data for product ids specified
   const data: any = await $fetch('https://fakestoreapi.com/products/' + body.id)
 
   const stripe = new Stripe(useRuntimeConfig().stripeSecret, { apiVersion: '2022-11-15' })
   try {
+    // Generates a link for checkout
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
+      payment_method_types: ['card', 'cashapp', 'customer_balance', 'paypal'],
       mode: 'payment',
       success_url: `${process.env.URL}/success`,
       cancel_url: `${process.env.URL}/cancel`,
@@ -36,7 +41,7 @@ export default defineEventHandler(async (event) => {
         quantity: 1
       }],
       shipping_address_collection: {
-        allowed_countries: ['US', 'GB', 'FR', 'IN', 'CA']
+        allowed_countries: ['US', 'GB', 'FR', 'IN', 'CA', 'GE']
       }
     })
     return JSON.stringify(session.url)

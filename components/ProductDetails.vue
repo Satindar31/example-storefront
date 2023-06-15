@@ -16,6 +16,8 @@
 </template>
 
 <script setup>
+// Used to specify productID when used like <ProductDetails :product="product" />
+// /pages/products/[id].vue line 3
 const { product } = defineProps(['product'])
 </script>
 
