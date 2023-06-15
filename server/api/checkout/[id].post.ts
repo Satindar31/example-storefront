@@ -41,7 +41,7 @@ export default defineEventHandler(async (event) => {
         quantity: 1
       }],
       shipping_address_collection: {
-        allowed_countries: ['US', 'GB', 'FR', 'IN', 'CA', 'GE']
+        allowed_countries: ['US', 'GB', 'FR', 'IN', 'CA', 'DE']
       }
     })
     return JSON.stringify(session.url)
