@@ -1,9 +1,5 @@
 import Stripe from "stripe"
 
-const products = new Map([
-  [1, { priceInCents: 10995, Name: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops' }],
-  [2, { priceInCents: 2230, Name: 'Mens Casual Premium Slim Fit T-Shirts' }]
-])
 
 
 export default defineEventHandler(async (event) => {

@@ -5,10 +5,12 @@
             <slot />
         </div>
     </div>
-    <script src="//code.tidio.co/hbmaiugetlvg7ncredz6anvzfkct12h5.js" async></script>
+    <Script :src="tidioURL" defer></Script>
 </template>
 
 <script setup>
+const tidioURL = useRuntimeConfig().public.TIDIO_URL
+console.log(tidioURL)
 </script>
 
 <style scoped>

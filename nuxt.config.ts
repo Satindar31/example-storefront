@@ -9,6 +9,10 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
-    stripeSecret: process.env.STRIPE_SECRET_KEY
+    stripeSecret: process.env.STRIPE_SECRET_KEY,
+    
+    public: {
+      TIDIO_URL: process.env.TIDIO_URL
+    }
   }
 })
