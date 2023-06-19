@@ -4,8 +4,8 @@
         <div>
             <slot />
         </div>
+    <Script :src="tidioURL" />
     </div>
-    <Script :src="tidioURL" defer></Script>
 </template>
 
 <script setup>
