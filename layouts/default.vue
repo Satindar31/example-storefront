@@ -4,8 +4,8 @@
         <div>
             <slot />
         </div>
-    <Script :src="tidioURL" />
     </div>
+    <Script :src="tidioURL" />
 </template>
 
 <script setup>
@@ -13,6 +13,4 @@ const tidioURL = useRuntimeConfig().public.TIDIO_URL
 console.log(tidioURL)
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
