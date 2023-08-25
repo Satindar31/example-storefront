@@ -5221,10 +5221,10 @@ strip-literal@^1.0.1:
   dependencies:
     acorn "^8.8.2"
 
-stripe@^12.12.0:
-  version "12.16.0"
-  resolved "https://registry.yarnpkg.com/stripe/-/stripe-12.16.0.tgz#a52f3ab9480b10435dd1e9792820c65bfd406506"
-  integrity sha512-iwVkyZsS9KsWmEVK5qnbPeX/m94+Z3fXIRU7Q4iNBS2Zuj1spGIjLKMN3tejUs/ZZ2o7dCYFJvVdC2aZMYo8GA==
+stripe@^12.17.0:
+  version "12.18.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-12.18.0.tgz#1190aec3cf075d0611287046386bf0c0d165db69"
+  integrity sha512-cYjgBM2SY/dTm8Lr6eMyyONaHTZHA/QjHxFUIW5WH8FevSRIGAVtXEmBkUXF1fsqe7QvvRgQSGSJZmjDacegGg==
   dependencies:
     "@types/node" ">=8.1.0"
     qs "^6.11.0"
